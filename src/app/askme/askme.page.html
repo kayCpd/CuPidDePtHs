@@ -1,0 +1,198 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Ask Me</ion-title>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content padding="true">
+<form [formGroup]="askMeform">
+  <ion-list lines="" class="ion-no-margin ion-no-padding">
+
+        <ion-item>
+            <!-- <ion-label class="input-label">First Name:</ion-label> -->
+            <ion-input type="text" formControlName="firstname" placeholder="First Name:"></ion-input>
+        </ion-item>
+
+
+          <div class="validation_messages">
+            <ng-container *ngFor="let validation of validation_messages.firstname">
+              <div class="error-message" *ngIf="askMeform.get('firstname').hasError(validation.type) && (askMeform.get('firstname').dirty || askMeform.get('firstname').touched)">
+                {{validation.message}}
+              </div>
+            </ng-container> 
+          </div>
+          
+
+          <ion-item>
+              <!-- <ion-label class="input-label">First Name:</ion-label> -->
+              <ion-input type="text" formControlName="lastname" placeholder="Last Name:"></ion-input>
+          </ion-item>
+    
+            <div class="validation_messages">
+              <ng-container *ngFor="let validation of validation_messages.lastname">
+                <div class="error-message" *ngIf="askMeform.get('lastname').hasError(validation.type) && (askMeform.get('lastname').dirty || askMeform.get('lastname').touched)">
+                  {{validation.message}}
+                </div>
+              </ng-container> 
+            </div>
+
+
+            <ion-item>
+                <!-- <ion-label class="input-label">First Name:</ion-label> -->
+                <ion-input type="text" formControlName="email" placeholder="Email:"></ion-input>
+            </ion-item>
+      
+              <div class="validation_messages">
+                <ng-container *ngFor="let validation of validation_messages.email">
+                  <div class="error-message" *ngIf="askMeform.get('email').hasError(validation.type) && (askMeform.get('email').dirty || askMeform.get('email').touched)">
+                    {{validation.message}}
+                  </div>
+                </ng-container> 
+              </div>
+
+
+
+
+              <ion-item>
+                 <ion-textarea type="text" formControlName="message" placeholder="Message:"></ion-textarea>
+              </ion-item>
+        
+                <div class="validation_messages">
+                  <ng-container *ngFor="let validation of validation_messages.message">
+                    <div class="error-message" *ngIf="askMeform.get('message').hasError(validation.type) && (askMeform.get('message').dirty || askMeform.get('message').touched)">
+                      {{validation.message}}
+                    </div>
+                  </ng-container> 
+                </div>
+
+
+                <ion-item>
+                    <ion-label>Understand Terms</ion-label>
+                    <ion-checkbox required FormControlName="terms" color="secondary" checked slot="start"></ion-checkbox>
+                </ion-item>
+           
+                   <div class="validation_messages">
+                     <ng-container *ngFor="let validation of validation_messages.message">
+                       <div class="error-message" *ngIf="askMeform.get('terms').hasError(validation.type) && (askMeform.get('terms').dirty || askMeform.get('terms').touched)">
+                         {{validation.message}}
+                       </div>
+                     </ng-container> 
+                   </div>
+
+             <!-- <ion-item [routerLink]="/terms" routerDirection="forward"> -->
+              <ion-item routerLink="/terms" routerDirection="forward">
+  
+
+
+              <ion-label class="ion-text-center" color="secondary">
+                  Our Terms
+              </ion-label>
+              
+              
+                <!-- <ion-col> -->
+                 <!-- <ion-label>Terms</ion-label> -->
+
+                 <!-- <ion-router-link href="#">Our Terms</ion-router-link> -->
+                 <!-- <a> <ion-router-link color="secondary">Our Terms</ion-router-link> </a> -->
+
+
+                   <!-- <link rel="stylesheet" type="text/css" href="theme.css"> -->
+                <!-- </ion-col> -->
+
+             </ion-item>
+
+
+                  <!-- <ion-item>
+            <ion-label class="input-label">Last Name:</ion-label>
+            <ion-input required type="text" FormControlName="lastname" class="form-control" placeholder="Your Last Name:"></ion-input>
+        </ion-item>
+          <div class="validation-errors">
+            <ng-container *ngFor="let validation of validation_messages.lastname">
+              <div class="error-message" *ngIf=" submitted && askMeform.get('lastname').hasError(validation.type) && (askMeform.get('lastname').dirty || askMeform.get('lastname').touched)">
+                {{validation.message}}
+              </div>
+            </ng-container> 
+          </div>
+
+          <ion-item>
+              <ion-label class="input-label">Email:</ion-label>
+              <ion-input required type="text" FormControlName="email" class="form-control" placeholder="Your Email:"></ion-input>
+          </ion-item>
+            <div class="validation-errors">
+              <ng-container *ngFor="let validation of validation_messages.email">
+                <div class="error-message" *ngIf=" askMeform.get('email').hasError(validation.type) && (askMeform.get('email').dirty || askMeform.get('email').touched)">
+                  {{validation.message}}
+                </div>
+              </ng-container> 
+            </div>
+
+            <ion-item>
+                <ion-textarea required type="text" FormControlName="message"  placeholder="Ask Me:"></ion-textarea>
+            </ion-item>
+              <div class="validation-errors">
+                <ng-container *ngFor="let validation of validation_messages.message">
+                  <div class="error-message" *ngIf=" askMeform.get('message').hasError(validation.type) && (askMeform.get('message').dirty || askMeform.get('message').touched)">
+                    {{validation.message}}
+                  </div>
+                </ng-container> 
+              </div>
+
+
+            <ion-item>
+              <ion-label>I Understand Terms</ion-label>
+              <ion-checkbox required FormControlName="terms" color="secondary" checked slot="start"></ion-checkbox>
+            </ion-item>
+              <div class="validation-errors">
+                <ng-container *ngFor="let validation of validation_messages.terms">
+                  <div class="error-message" *ngIf=" askMeform.get('terms').hasError(validation.type) && (askMeform.get('terms').dirty || askMeform.get('terms').touched)">
+                    {{validation.message}}
+                  </div>
+                </ng-container> 
+              </div> -->
+
+
+
+
+
+
+
+        <!-- <form [formGroup]="authForm" (ngSubmit)="onSubmit(authForm.value)">
+            <ion-item>
+                <ion-label>First Name</ion-label>
+                <ion-input formControlName="email"></ion-input>
+            </ion-item>     
+            <div *ngIf="submitted && frm.email.errors" class="invalid-feedback">
+                <ion-item *ngIf="frm.email.errors.required">
+                    <p style="color:red">Email is required!</p>
+                </ion-item>
+                <ion-item *ngIf="frm.email.errors.email">
+                    <p style="color:red">Email must be a valid email address!</p>
+                </ion-item>
+            </div> -->
+
+
+            
+            <!-- <div class="ion-padding">
+              <ion-button (click)="showIntAd()"
+               [disabled]=!askMeform.valid expand="block" class="button button-round button-assertive">Submit</ion-button>
+            </div> -->
+    <div class="ion-padding">
+      <ion-button expand="block" class="button button-round button-assertive" (click)="showIntAd()">Submit</ion-button>
+    </div> 
+
+    <!-- <div class="ion-padding">
+      <ion-button expand="block" class="button button-round button-assertive" (click)="onSubmit()">Submit</ion-button>
+    </div> --> 
+    
+    
+    <!-- <div class="ion-padding">
+      <ion-button (click)="onSubmit()"
+       [disabled]=!askMeform.valid expand="block" class="button button-round button-assertive">Submit</ion-button>
+    </div> -->
+
+  </ion-list>
+</form>
+</ion-content>

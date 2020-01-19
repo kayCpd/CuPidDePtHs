@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>Daily Mantra</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <ion-slides class="image-slider" loop="true" [options]="sliderOpts"> -->
+  <!-- <ion-slides [options]="sliderOpts"> -->
+  <!-- <ion-slides class="image-slider" loop="true" slidesPerView ="2"> -->
+  <ion-slides class="image-slider" loop="true" [options]="sliderOpts">
+    <ion-slide *ngFor="let img of images">
+        <img src="../../assets/dm/{{img}}.png" class="thumb-img" imageViewer>
+    <!-- <img src="../../assets/dm/{{img}}.png" tappable (click)="openPreview(img)"> -->
+    </ion-slide>
+  </ion-slides> 
+
+
+
+</ion-content>
